@@ -1,4 +1,5 @@
 from django import forms
+from first_app.models import User
 #django validator
 from django.core import validators 
 
@@ -23,7 +24,10 @@ class FormName(forms.Form):
 
 
 
-
+class NewUserForm(forms.ModelForm):
+    class Meta: 
+        model = User
+        fields = "__all__"
 
 
 

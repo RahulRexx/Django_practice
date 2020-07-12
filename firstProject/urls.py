@@ -23,6 +23,7 @@ urlpatterns = [
     path('first_app/',include('first_app.urls')),
     path('',views.index,name="index"),
     path('formpage/',views.form_name_view,name='form_name'),
+    path('users/',views.users,name="users"),
     path('admin/', admin.site.urls),
    
 ]
