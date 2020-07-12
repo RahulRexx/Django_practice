@@ -22,5 +22,7 @@ from django.conf.urls import include
 urlpatterns = [
     path('first_app/',include('first_app.urls')),
     path('',views.index,name="index"),
+    path('formpage/',views.form_name_view,name='form_name'),
     path('admin/', admin.site.urls),
+   
 ]
