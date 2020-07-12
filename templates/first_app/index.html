@@ -40,6 +40,13 @@
                 {% endif %}
             </table>
         </div>
+        <!-- This is template tagging i.e instead of using just absolute path i am using relatve path -->
+        <div class="container">
+            <a href="{% url 'first_app:index'  %}">Path to first_app</a>
+            <a href="{% url 'first_app:form_name'  %}">Path to formPage</a>
+            <a href="{% url 'first_app:users'  %}">Path to users</a>
+            <a href="{% url 'admin:index'  %}">Admin Page</a>
+        </div>
        
     </body>
 </html>

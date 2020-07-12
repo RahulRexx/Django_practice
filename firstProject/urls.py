@@ -19,11 +19,17 @@ from first_app import views
 
 from django.conf.urls import include
 
-urlpatterns = [
-    path('first_app/',include('first_app.urls')),
-    path('',views.index,name="index"),
-    path('formpage/',views.form_name_view,name='form_name'),
-    path('users/',views.users,name="users"),
-    path('admin/', admin.site.urls),
+# urlpatterns = [
+#     path('first_app/',include('first_app.urls')),
+#     path('',views.index,name="index"),
+#     path('formpage/',views.form_name_view,name='form_name'),
+#     path('users/',views.users,name="users"),
+#     path('admin/', admin.site.urls),
    
+# ]
+
+urlpatterns = [
+    path('',views.index,name='index'),
+    path('',include('first_app.urls')),
+    path('admin/', admin.site.urls),
 ]
