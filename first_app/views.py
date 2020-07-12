@@ -13,6 +13,14 @@ def index(request) :
 
     return render(request,'first_app/index.html',context=web_dict) 
 
+def first(request) :
+    # my_dict = {'text' : "oh yeah i am inserted"}
+    web_list = AccessRecord.objects.order_by('date')
+
+    web_dict = { 'accessrecord' : web_list }
+
+    return render(request,'first_app/first.html',context=web_dict) 
+
 def form_name_view(request) :
     form = forms.FormName()
 

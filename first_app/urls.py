@@ -8,7 +8,7 @@ app_name = 'first_app'
 # ]
 
 urlpatterns = [
-    url('first/',views.index,name="index"),
+    url('first/',views.first,name="first"),
     url('formpage/',views.form_name_view,name='form_name'),
     url('users/',views.users,name="users"),
 ]

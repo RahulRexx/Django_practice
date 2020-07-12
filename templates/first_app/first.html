@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+
+{% extends "first_app/index.html" %}
+    {% block body_block %}
+
+    {% load static %}
+    <div class="djangoOne text-center">
+        <h1 id="hid">
+            OK i m join
+        </h1>
+        {{text}}
+        <img src="{% static "images/download.jpg" %}" onclick="called()">
+    </div>
+    <div class="djangoTwo">
+        <table>
+            {% if accessrecord%}
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+            </tr>
+            {% for acc in accessrecord %}
+            <tr>
+                <td>{{acc.name}}</td>
+                <td>{{acc.date}}</td>
+            </tr>
+            {% endfor%}
+            {% else %}
+            <p>No record to access</p>
+            {% endif %}
+        </table>
+    </div>
+
+
+   {%  endblock %}
+    
