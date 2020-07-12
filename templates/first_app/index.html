@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ok</title>
+        <link rel="stylesheet" href="{% static "css/mystyle.css"  %}">
+    </head>
+    <script>
+        function called() {
+            document.getElementById('hid').innerHTML = "<em> YOU CLICKED THE IMAGE</em>";
+        }
+        
+    </script>
+    <body>
+       <h1 id="hid"> 
+           OK i m join
+       </h1>
+        {{text}}
+        <img src="{% static "images/download.jpg" %}"  onclick="called()">
+        <script src="" async defer></script>
+    </body>
+</html>
