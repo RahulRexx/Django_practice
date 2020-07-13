@@ -9,7 +9,7 @@ def index(request) :
     # my_dict = {'text' : "oh yeah i am inserted"}
     web_list = AccessRecord.objects.order_by('date')
 
-    web_dict = { 'accessrecord' : web_list }
+    web_dict = { 'text' : 'hello world','number' : 99 }
 
     return render(request,'first_app/index.html',context=web_dict) 
 
