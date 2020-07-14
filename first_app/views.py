@@ -42,7 +42,7 @@ def users(request):
 
         if form.is_valid():
             form.save(commit = True)
-            return index(request)
+            return index(request)    # it is like request.redirect
         else :
             print('Error')
  
