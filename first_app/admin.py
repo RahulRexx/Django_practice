@@ -8,4 +8,7 @@ admin.site.register(Webpage)
 admin.site.register(User)
 
 
+#################################################
+# from first_app.models import UserProfileInfo
 
+# admin.site.register(UserProfileInfo)
